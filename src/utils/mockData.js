@@ -1,39 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-/**
- *
- * App Container
- *  - Header
- *      - Menu
- *      - Contact us
- *      - Cart
- *  - Restuarant Container
- *      - Resutarant cards
- *  - Footer
- */
-
-const AppContainer = () => (
-  <div className="app-container">
-    <Header />
-    <RestuarantContainer />
-  </div>
-);
-
-const Header = () => (
-  <div className="header">
-    <img
-      className="app-logo"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxFIGs6HjK4KDDOad89T4lJhkKhS5MUZHGDA&usqp=CAU"
-    />
-    <ul className="header-list">
-      <li>Menu</li>
-      <li>Contact us</li>
-      <li>Cart</li>
-    </ul>
-  </div>
-);
-
-const resData = [
+export const resData = [
   {
     info: {
       id: "235618",
@@ -837,34 +802,3 @@ const resData = [
     widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
 ];
-
-const RestuarantContainer = () => (
-  <div className="res-container">
-    {resData.map((restuarant) => (
-      <RestuarantCard key={restuarant.info.id} resData={restuarant} />
-    ))}
-  </div>
-);
-
-const RestuarantCard = (props) => {
-  console.log(props.resData);
-  const { name, avgRating, costForTwo, cloudinaryImageId } = props.resData.info;
-  console.log(name, avgRating, costForTwo);
-  return (
-    <div className="res-card">
-      <img
-        className="res-image"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      />
-      <h1>{name}</h1>
-      <h2>{avgRating}</h2>
-      <h2>{costForTwo}</h2>
-    </div>
-  );
-};
-
-const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-reactRoot.render(<AppContainer />);
