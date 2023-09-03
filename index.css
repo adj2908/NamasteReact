@@ -1,3 +1,34 @@
-#heading {
-    color: red;
+.header {
+  display: flex;
+  border: 4px solid black;
+  padding: 10px;
+  height: auto;
+}
+
+.header-list {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+}
+.header-list li {
+  padding: 10px;
+  font-size: 30px;
+}
+.res-container {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.res-card {
+  background-color: antiquewhite;
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid black;
+}
+.res-card:hover {
+  border: 3px solid black;
+}
+.res-image {
+  width: 22vw;
+  height: 20vw;
 }
