@@ -22,15 +22,15 @@
 .res-card {
   background-color: antiquewhite;
   padding: 10px;
-  margin: 2px;
+  margin: 5px;
+  width: 240px;
   border: 1px solid black;
 }
 .res-card:hover {
   border: 3px solid black;
 }
 .res-image {
-  width: 22vw;
-  height: 20vw;
+  width: 100%;
 }
 .filter-btn {
   margin: 10px;
