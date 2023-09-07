@@ -8,7 +8,7 @@ class About extends React.Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.fetchUserDetails();
   }
 
